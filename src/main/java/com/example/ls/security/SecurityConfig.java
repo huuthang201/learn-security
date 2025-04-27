@@ -66,7 +66,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/hello").permitAll()
                         .requestMatchers("/api/user").hasRole("USER")
                         .requestMatchers("/api/admin").hasRole("ADMIN")
-                        .anyRequest().denyAll())
+                        .anyRequest().permitAll())
                 .httpBasic(httpBasic -> httpBasic.realmName("Spring Security Demo"));
 
         return http.build();

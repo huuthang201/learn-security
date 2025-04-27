@@ -3,6 +3,7 @@ package com.example.ls.entity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Set;
 
@@ -10,6 +11,7 @@ import java.util.Set;
 @Table(name = "roles")
 @AllArgsConstructor
 @Data
+@NoArgsConstructor
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
