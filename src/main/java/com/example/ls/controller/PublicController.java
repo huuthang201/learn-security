@@ -5,12 +5,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class PublicController {
-    @GetMapping("/hello")
+    @GetMapping("/api/hello")
     public String hello() {
-        return "Hello, Spring Security!";
+        return "Hello, public API!";
     }
-    @GetMapping("/secure")
-    public String secure() {
-        return "Bạn đã xác thực thành công!";
+
+    @GetMapping("/api/user")
+    public String forUser() {
+        return "Hello USER-role!";
+    }
+
+    @GetMapping("/api/admin")
+    public String forAdmin() {
+        return "Hello ADMIN-role!";
     }
 }
